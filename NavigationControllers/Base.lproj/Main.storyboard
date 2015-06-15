@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Xqf-b5-mCY">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Team-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="TeamViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kI8-OC-IwE"/>
                         <viewControllerLayoutGuide type="bottom" id="SnP-LE-5rS"/>
@@ -23,6 +23,9 @@
                                 <state key="normal" backgroundImage="al.jpg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="mKz-5K-FLT" kind="push" identifier="al" id="SA6-6r-vXX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUU-Aq-7b6">
                                 <rect key="frame" x="174" y="138" width="110" height="120"/>
@@ -31,14 +34,9 @@
                                 <state key="normal" backgroundImage="joe.jpg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIu-yK-Br8">
-                                <rect key="frame" x="174" y="308" width="110" height="120"/>
-                                <accessibility key="accessibilityConfiguration" label="aviImage"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" backgroundImage="avi.jpg">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <connections>
+                                    <segue destination="mKz-5K-FLT" kind="push" identifier="joe" id="6r4-tA-hN0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqs-U2-von">
                                 <rect key="frame" x="24" y="308" width="110" height="120"/>
@@ -47,20 +45,34 @@
                                 <state key="normal" backgroundImage="chris.jpg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="mKz-5K-FLT" kind="push" identifier="chris" id="rl1-6B-9C8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIu-yK-Br8">
+                                <rect key="frame" x="174" y="308" width="110" height="120"/>
+                                <accessibility key="accessibilityConfiguration" label="aviImage"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" backgroundImage="avi.jpg">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mKz-5K-FLT" kind="push" identifier="avi" id="KAQ-B8-8LS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Ghh-n8-KQ0"/>
+                    <navigationItem key="navigationItem" title="Team" id="Ghh-n8-KQ0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="491" y="99"/>
+            <point key="canvasLocation" x="1023" y="99"/>
         </scene>
-        <!--View Controller-->
+        <!--Al-->
         <scene sceneID="mwV-A3-UA3">
             <objects>
-                <viewController id="mKz-5K-FLT" sceneMemberID="viewController">
+                <viewController id="mKz-5K-FLT" customClass="TeamDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xRX-zw-Rpb"/>
                         <viewControllerLayoutGuide type="bottom" id="F21-Po-pe8"/>
@@ -99,11 +111,36 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="4af-HY-tdv"/>
+                    <navigationItem key="navigationItem" title="Al" id="4af-HY-tdv"/>
+                    <connections>
+                        <outlet property="birthPlaceLabel" destination="AUo-h2-VFS" id="c8X-GG-gY4"/>
+                        <outlet property="favoriteBandLabel" destination="9Pf-6J-Pt8" id="yKk-9K-Aiu"/>
+                        <outlet property="imageView" destination="UfY-cI-eh3" id="GdI-Ql-7xm"/>
+                        <outlet property="nameLabel" destination="bqA-LW-Bdw" id="bw9-1E-pzq"/>
+                        <outlet property="phoneLabel" destination="Uag-Kv-B1M" id="Lhs-De-mZ7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="80I-JA-Vhy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1030" y="99"/>
+            <point key="canvasLocation" x="1562" y="99"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Qmc-2c-HAJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xqf-b5-mCY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oDY-Bs-riI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="9G9-os-nt3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Tl-sh-idS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="491" y="99"/>
         </scene>
     </scenes>
     <resources>
@@ -117,4 +154,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="SA6-6r-vXX"/>
+    </inferredMetricsTieBreakers>
 </document>

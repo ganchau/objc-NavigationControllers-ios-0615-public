@@ -26,6 +26,9 @@
 		44F3901218B3F4650012314D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44F3901018B3F4650012314D /* InfoPlist.strings */; };
 		44F3901418B3F4650012314D /* TeamMemberSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F3901318B3F4650012314D /* TeamMemberSpec.m */; };
 		681A6BADA8204C118F67A027 /* libPods-NavigationControllersTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B110E9DA3FF433A96E2A505 /* libPods-NavigationControllersTests.a */; };
+		BDD38C0F1B2F0FA700FAA689 /* TeamMember.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD38C0E1B2F0FA700FAA689 /* TeamMember.m */; };
+		BDD38C131B2F103800FAA689 /* TeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD38C121B2F103800FAA689 /* TeamViewController.m */; };
+		BDD38C191B2F10D900FAA689 /* TeamDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD38C181B2F10D900FAA689 /* TeamDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,12 +66,12 @@
 		44F3900F18B3F4650012314D /* NavigationControllersTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NavigationControllersTests-Info.plist"; sourceTree = "<group>"; };
 		44F3901118B3F4650012314D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		44F3901318B3F4650012314D /* TeamMemberSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeamMemberSpec.m; sourceTree = "<group>"; };
-		44F3901D18B3F4B40012314D /* TeamMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamMember.h; sourceTree = "<group>"; };
-		44F3901E18B3F4B40012314D /* TeamMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamMember.m; sourceTree = "<group>"; };
-		44F3902018B3F67A0012314D /* TeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamViewController.h; sourceTree = "<group>"; };
-		44F3902118B3F67A0012314D /* TeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamViewController.m; sourceTree = "<group>"; };
-		44F3902318B3F6890012314D /* TeamDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamDetailViewController.h; sourceTree = "<group>"; };
-		44F3902418B3F6890012314D /* TeamDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamDetailViewController.m; sourceTree = "<group>"; };
+		BDD38C0D1B2F0FA700FAA689 /* TeamMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TeamMember.h; path = Model/TeamMember.h; sourceTree = "<group>"; };
+		BDD38C0E1B2F0FA700FAA689 /* TeamMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TeamMember.m; path = Model/TeamMember.m; sourceTree = "<group>"; };
+		BDD38C111B2F103800FAA689 /* TeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TeamViewController.h; path = Controller/TeamViewController.h; sourceTree = "<group>"; };
+		BDD38C121B2F103800FAA689 /* TeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TeamViewController.m; path = Controller/TeamViewController.m; sourceTree = "<group>"; };
+		BDD38C171B2F10D900FAA689 /* TeamDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TeamDetailViewController.h; path = Controller/TeamDetailViewController.h; sourceTree = "<group>"; };
+		BDD38C181B2F10D900FAA689 /* TeamDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TeamDetailViewController.m; path = Controller/TeamDetailViewController.m; sourceTree = "<group>"; };
 		C8F9E5DF606C723879D1934D /* Pods-NavigationControllersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavigationControllersTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NavigationControllersTests/Pods-NavigationControllersTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +103,8 @@
 		44F38FDC18B3F4650012314D = {
 			isa = PBXGroup;
 			children = (
+				BDD38C161B2F109E00FAA689 /* Controller */,
+				BDD38C101B2F0FB100FAA689 /* Model */,
 				44F38FEE18B3F4650012314D /* NavigationControllers */,
 				44F3900D18B3F4650012314D /* NavigationControllersTests */,
 				44F38FE718B3F4650012314D /* Frameworks */,
@@ -182,6 +187,26 @@
 				10B9B3F904CE21FB0A5F4C8F /* Pods-NavigationControllersTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		BDD38C101B2F0FB100FAA689 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BDD38C0D1B2F0FA700FAA689 /* TeamMember.h */,
+				BDD38C0E1B2F0FA700FAA689 /* TeamMember.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		BDD38C161B2F109E00FAA689 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BDD38C111B2F103800FAA689 /* TeamViewController.h */,
+				BDD38C121B2F103800FAA689 /* TeamViewController.m */,
+				BDD38C171B2F10D900FAA689 /* TeamDetailViewController.h */,
+				BDD38C181B2F10D900FAA689 /* TeamDetailViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,8 +345,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDD38C191B2F10D900FAA689 /* TeamDetailViewController.m in Sources */,
 				44F38FF918B3F4650012314D /* AppDelegate.m in Sources */,
+				BDD38C131B2F103800FAA689 /* TeamViewController.m in Sources */,
 				44F38FF518B3F4650012314D /* main.m in Sources */,
+				BDD38C0F1B2F0FA700FAA689 /* TeamMember.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
